@@ -652,7 +652,7 @@ jobs:
           key: ${{ runner.os }}-ccache-${{ github.sha }}
         
       - name: "💛 Upload Image"
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: "${{ env.kernelDevice }}_${{ env.kernelName }}_${{ env.kernelBranch }}_${{ env.BUILD_TIME }}"
           path: ./${{ env.kernelDir }}/${{ env.OUT_DIR }}/arch/${{ env.ARCH }}/boot/Image
